@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> <!-- TDK --> <title>登录</title>
+    <meta name="format-detection" content="telephone=no"/> <!--兼容老浏览器-->
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1, maximum-scale=1">
+    <!--隐藏苹果工具栏和菜单栏-->
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="theme-color" content="#FF9900">
+    <meta name="baidu-site-verification" content="AwZm789POz"/>
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="x-dns-prefetch-control" content="on"/>
+    <link rel="dns-prefetch" href="http://storage.genshuixue.com"/>
+    <link rel="dns-prefetch" href="http://click.genshuixue.com"/>
+    <meta name="gsx-page" content="local_mock_page"/>
+    <script type="text/javascript"> (function () { /* 一些公共的page参数 */
+        window.common_page_info = {};
+        common_page_info["page_type"] = "local_mock_page";
+    })(); </script>
+    <script src="http://192.168.1.105:8081/src/loader.js"></script>
+    <script label-del="true" src="http://192.168.1.105:8081/lib/requirejs/plugin_text.js"></script>
+    <meta name="gsx-sku" content="">
+    <script> alert(2424324)(function (global) {
+        var page_config = null;
+        var require_config = null;
+        var cbs = [];
+
+        function isReady() {
+            return page_config && require_config;
+        }
+
+        function check() {
+            if (isReady()) {
+                var cb;
+                while (cb = cbs.shift()) {
+                    cb(page_config);
+                }
+            }
+        }
+
+        global['initRequireConfig'] = function (config) {
+            config['root_path'] = 'http://192.168.1.105:8081/';
+            if (require._config) {
+                require._config(config);
+            }
+            require_config = config || true;
+            check();
+        };
+    })(window);
+    var page_module = 'page/login/index';
+    var other_modules = [];
+    var page_data = null;  </script>
+    <script label-del="true"> /** * Created by xuzheng on 15/12/15. */ require.config({
+        'baseUrl': 'http://192.168.1.105:8081/src/',
+        'packages': [{'name': 'zepto', 'location': '../lib/zepto', 'main': 'zepto'}, {
+            'name': 'iscroll',
+            'location': '../lib/iscroll',
+            'main': 'iscroll'
+        }, {'name': 'jockey', 'location': '../lib/jockey', 'main': 'jockey'}, {
+            'name': 'ga',
+            'location': '../lib/ga',
+            'main': 'ga'
+        }, {'name': 'template', 'location': '../lib/artTemplate', 'main': 'template'}, {
+            'name': 'template',
+            'location': '../lib/artTemplate',
+            'main': 'template'
+        }, {'name': 'swiper', 'location': '../lib/swiper/dist/js', 'main': 'swiper'}]
+    }); //initRequireConfig(1); </script>
+    <link rel="stylesheet" href="http://192.168.1.105:8081/src/page/login/css/index.styl"/>
+</head>
+<body>
+<div id="header">
+    <header class="nav-bar" id="nav-bar">
+        <div class="nav-wrap-left"><a class="nav-button" href="javascript:history.back()"> <i
+                class="icon icon-back"></i> </a></div>
+        <div class="nav-header h1">-1登录</div>
+    </header>
+</div>
+<div id="container" class="container"> dsafasfsfsf</div>
+<script> (function () {
+    function createModFn(module_name) {
+        var params = [];
+        for (var i = 1, n = arguments.length; i < n; i++) {
+            params.push(arguments[i]);
+        }
+        return function (modInitFn) {
+            if ('function' == typeof modInitFn) {
+                modInitFn.apply(null, params);
+            } else if ('object' == typeof modInitFn && modInitFn.init) {
+                modInitFn.init.apply(null, params);
+            }
+        }
+    }
+
+    var modFns = [];
+    var modules = [];
+    if (window.page_module) {
+        modules.push(page_module);
+        modFns.push(createModFn(page_module, page_data));
+    }
+    if (window.other_modules) {
+        for (var i = 0, n = other_modules.length; i < n; i++) {
+            modules.push(other_modules[i]);
+            modFns.push(createModFn(other_modules[i]));
+        }
+    }
+    function initMods(mods) {
+        for (var i = 0, n = mods.length; i < n; i++) {
+            if (modFns[i]) {
+                modFns[i](mods[i]);
+            }
+        }
+    }
+
+    var req = require;
+    console.log(234243243)
+    req(modules, function () {
+        var args = arguments;
+        if (window.gsx_ready) {
+            gsx_ready(function () {
+                initMods.call(null, args);
+            });
+        } else {
+            initMods.call(null, args);
+        }
+    });
+})();
+</script>
+</body>
+</html>

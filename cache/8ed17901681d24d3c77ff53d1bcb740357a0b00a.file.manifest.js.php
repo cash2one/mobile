@@ -1,0 +1,7 @@
+<?php /* Smarty version Smarty-3.1.19, created on 2016-12-24 22:04:37 compiled from "/Users/wanglijun/WebstormProjects/m-test/src/manifest.js" */ ?>
+<?php /*%%SmartyHeaderCode:1372648742585e73c3b68192-64213805%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array ( 'file_dependency' => array ( '8ed17901681d24d3c77ff53d1bcb740357a0b00a' => array ( 0 => '/Users/wanglijun/WebstormProjects/m-test/src/manifest.js', 1 => 1482588275, 2 => 'file', ), ), 'nocache_hash' => '1372648742585e73c3b68192-64213805', 'function' => array ( ), 'version' => 'Smarty-3.1.19', 'unifunc' => 'content_585e73c3b69491_95864775', 'variables' => array ( 'static_origin' => 0, ), 'has_nocache_code' => false,
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_585e73c3b69491_95864775')) {function content_585e73c3b69491_95864775($_smarty_tpl) {?>/** * Created by xuzheng on 15/12/15. */ require.config({ 'baseUrl': '<?php echo $_smarty_tpl->tpl_vars['static_origin']->value;?>
+/src/', 'packages': [ { 'name': 'zepto', 'location': '../lib/zepto', 'main': 'zepto' }, { 'name': 'iscroll', 'location': '../lib/iscroll', 'main': 'iscroll' }, { 'name': 'jockey', 'location': '../lib/jockey', 'main': 'jockey' }, { 'name': 'ga', 'location': '../lib/ga', 'main': 'ga' }, { 'name': 'template', 'location': '../lib/artTemplate', 'main': 'template' } , { 'name': 'template', 'location': '../lib/artTemplate', 'main': 'template' }, { 'name': 'swiper', 'location': '../lib/swiper/dist/js', 'main': 'swiper' } ]
+});<?php }} ?>
